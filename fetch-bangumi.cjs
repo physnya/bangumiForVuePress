@@ -23,7 +23,7 @@ const COLLECTION_TYPE_KEY = ["", "planTo", "completed", "ing"];
 const LIMIT = 100;
 const USER_AGENT = "physnya/blog (https://github.com/physnya/blog)";
 const BANGUMI_USER_NAME = process.env.BANGUMI_USER_NAME;
-const OUTPUT_DIR = path.resolve(__dirname, "./bangumi");
+const OUTPUT_DIR = path.resolve(__dirname, "../public");
 const OUTPUT_FILE = path.join(OUTPUT_DIR, "bangumi.json");
 
 // 获取条目数据
