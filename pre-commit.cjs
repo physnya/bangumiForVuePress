@@ -8,7 +8,7 @@ try {
 	execSync("node fetch-bangumi.cjs", { stdio: "inherit" });
 
 	// 2. 添加更新后的数据文件
-	execSync("git add ../docs/.vuepress/public/bangumi.json", { stdio: "inherit" });
+	execSync("git add ./bangumi/bangumi.json", { stdio: "inherit" });
 
 	console.log("✅ Pre-commit hook completed successfully");
 } catch (error) {
