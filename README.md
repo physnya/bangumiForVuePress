@@ -73,3 +73,7 @@ BANGUMI_USER_NAME=YOUR_BANGUMI_USER_NAME
 
 其中的 ``YOUR_BANGUMI_USER_NAME`` 写入你的 bangumi user ID，记住在 ``.gitignore`` 中添加 ``.env``，否则会造成自己的用户名泄露.
 
+---
+
+将 Vue 组件放入 ``componets/`` 文件夹，VuePress 会自动注册组件.
+
