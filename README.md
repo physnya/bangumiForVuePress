@@ -30,10 +30,10 @@ blog
 │      ├─ custom.css
 │      │
 │      ├─ components
-│          ├─ bangumi.vue
+│      │   └─ bangumi.vue
 │      │
 │      ├─ public
-│      │   ├─ bangumi.json
+│      │   └─ bangumi.json
 │      │
 │      └─ theme
 ├─ node_modules
@@ -75,5 +75,37 @@ BANGUMI_USER_NAME=YOUR_BANGUMI_USER_NAME
 
 ---
 
-将 Vue 组件放入 ``componets/`` 文件夹，VuePress 会自动注册组件.
+将 Vue 组件放入 ``componets/`` 文件夹，在 ``client.ts`` 中注册组件：
 
+```ts
+import { defineClientConfig } from 'vuepress/client'
+import Bangumi from './components/Bangumi.vue'
+
+export default defineClientConfig({
+    app.component('Bangumi', Bangumi)
+  },
+})
+```
+
+这之后就可以在 markdown 文件中引入组件，比如如下例子：
+
+```markdown
+---
+changelog: false
+title: Bangumi 番组计划
+draft: true
+permalink: /bangumi/
+pageLayout: doc
+copyright: false
+feed: false
+comments: false
+---
+
+这里是我在 [Bangumi 番组计划](https://bgm.tv/) 上记录的一些内容.
+
+<Bangumi />
+```
+
+---
+
+欢迎大家 fork 和 pr！
