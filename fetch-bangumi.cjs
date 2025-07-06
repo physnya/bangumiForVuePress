@@ -23,7 +23,7 @@ const COLLECTION_TYPE_KEY = ["", "planTo", "completed", "ing"];
 const LIMIT = 100;
 const USER_AGENT = "physnya/blog (https://github.com/physnya/blog)";
 const BANGUMI_USER_NAME = process.env.BANGUMI_USER_NAME;
-const OUTPUT_DIR = path.resolve(__dirname, "./bangumi");
+const OUTPUT_DIR = path.resolve(__dirname, "../docs/.vuepress/public");
 const OUTPUT_FILE = path.join(OUTPUT_DIR, "bangumi.json");
 
 // 获取条目数据
@@ -115,9 +115,9 @@ async function fetchBangumisInSubject() {
 		// 获取并保存数据
 		const items = await fetchBangumisInSubject();
 		fs.writeFileSync(OUTPUT_FILE, JSON.stringify(items, null, 2));
-		console.log(`✅ Successfully saved bangumis to ${OUTPUT_FILE}`);
+		console.log(`Successfully saved bangumis to ${OUTPUT_FILE}`);
 	} catch (error) {
-		console.error("❌ Failed to fetch bangumis:", error);
+		console.error("Failed to fetch bangumis:", error);
 		process.exit(1);
 	}
 })();
