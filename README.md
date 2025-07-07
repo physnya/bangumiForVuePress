@@ -1,7 +1,3 @@
-> [!WARNING]
->
-> 正在开发中.
-
 这是一个 Vue 组件和与之相关的 pre-commit 脚本，用来在 VuePress 网站上展示 bangumi 用户的观看记录，需要 bangumi ID ([Bangumi 番组计划](https://bgm.tv/)).
 
 ## 前置说明
